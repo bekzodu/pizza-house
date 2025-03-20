@@ -140,13 +140,13 @@
       position: fixed;
       top: 80px;
       left: -111%;
-      height: calc(100vh - 80px);
+      height: calc(40vh - 80px);
       width: 100%;
       flex-direction: column;
       background-color: rgba(0, 0, 0, 0.9);
-      padding: 20px;
+      padding: 0;
       transition: left 0.3s ease;
-      justify-content: flex-start;
+      justify-content: space-evenly;
       align-items: flex-start;
       gap: 0px;
     }
