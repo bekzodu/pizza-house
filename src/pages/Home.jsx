@@ -13,6 +13,15 @@ import slider1 from '../assets/slider1.jpeg';
 import slider2 from '../assets/slider2.jpeg';
 import slider3 from '../assets/slider3.jpeg';
 import ImageCarousel from '../components/ImageCarousel';
+import FoodCarousel from '../components/FoodCarousel';
+import chickenWings from '../assets/PizzaHouse_6PieceChickenWings.jpg';
+import caesarSalad from '../assets/PizzaHouse_CaesarSalad.jpg';
+import calzone from '../assets/PizzaHouse_Calzone.jpg';
+import cheesyBreadsticks from '../assets/PizzaHouse_CheesyBreadsticks.jpg';
+import chickenRancherSub from '../assets/PizzaHouse_ChickenRancherSub.jpg';
+import houseSalad from '../assets/PizzaHouse_HouseSalad.jpg';
+import meatLoversPizza from '../assets/PizzaHouse_MeatloversPizza.jpg';
+import mozzarellaSticks from '../assets/PizzaHouse_MozzarellaSticks.jpg';
 
 const Home = () => {
   const carouselImages = [
@@ -47,6 +56,45 @@ const Home = () => {
     {
       url: slider3,
       alt: "Slider Image 3",
+    }
+  ];
+
+  const foodItems = [
+    {
+      image: chickenWings,
+      alt: "6 Piece Chicken Wings"
+    },
+    {
+      image: breadsticks,
+      alt: "Breadsticks"
+    },
+    {
+      image: caesarSalad,
+      alt: "Caesar Salad"
+    },
+    {
+      image: calzone,
+      alt: "Calzone"
+    },
+    {
+      image: cheesyBreadsticks,
+      alt: "Cheesy Breadsticks"
+    },
+    {
+      image: chickenRancherSub,
+      alt: "Chicken Rancher Sub"
+    },
+    {
+      image: houseSalad,
+      alt: "House Salad"
+    },
+    {
+      image: meatLoversPizza,
+      alt: "Meat Lovers Pizza"
+    },
+    {
+      image: mozzarellaSticks,
+      alt: "Mozzarella Sticks"
     }
   ];
 
@@ -122,6 +170,8 @@ const Home = () => {
       <section className="imageCarouselSection">
         <ImageCarousel images={carouselImages} />
       </section>
+
+      <FoodCarousel items={foodItems} />
     </div>
   );
 };

@@ -1,0 +1,93 @@
+.food-carousel {
+  background-color: #e95048;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.food-carousel h1 {
+  text-align: center;
+  color: #000;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: "Permanent Marker", cursive;
+}
+
+.food-carousel-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.food-items-container {
+  width: 90%;
+  height: 300px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.food-item {
+  min-width: 20%;
+  height: 100%;
+  position: absolute;
+  padding: 0 10px;
+  will-change: transform;
+}
+
+.food-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 70% 30% 50% 50% / 50% 45% 55% 50%;
+  animation: blobby 8s ease-in-out infinite;
+}
+
+.nav-button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  margin: 0 1rem;
+}
+
+.nav-button span {
+  font-size: 1.5rem;
+  color: #ff6b6b;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+@keyframes blobby {
+  0% {
+    border-radius: 70% 30% 50% 50% / 50% 45% 55% 50%;
+  }
+  33% {
+    border-radius: 50% 60% 30% 70% / 60% 40% 60% 40%;
+  }
+  66% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 40% 60%;
+  }
+  100% {
+    border-radius: 70% 30% 50% 50% / 50% 45% 55% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .food-item {
+    min-width: 50%;
+  }
+  
+  .food-carousel h1 {
+    font-size: 2rem;
+  }
+}

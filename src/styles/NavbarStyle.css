@@ -151,7 +151,7 @@
 
     .nav-links {
         position: fixed;
-        top: 80px;
+        top: 125px;
         left: -111%;
         height: calc(40vh - 80px);
         width: 100%;
@@ -169,7 +169,7 @@
     }
 
     .nav-links a.nav-item {
-        color: white;
+        color: white !important;
         font-weight: 700;
         font-size: 1.5rem;
         width: 100%;
