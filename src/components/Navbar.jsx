@@ -47,8 +47,8 @@ const Navbar = () => {
         </button>
 
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <a href="#menu" className="nav-item">Menu</a>
-          <a href="#drinks" className="nav-item">Drinks</a>
+          <Link to="/menu" className="nav-item">Menu</Link>
+          <Link to="/about" className="nav-item">About</Link>
           <Link to="/contact" className="nav-item">Contact</Link>
           <a 
             href="https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c" 
