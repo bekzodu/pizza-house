@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/NavbarStyle.css';
 import logo from '../assets/pizza-house-logo-round.svg';
+import logoNoBg from '../assets/logo-no-bg.svg';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="logo-container">
           <img 
-            src={logo}
+            src={isScrolled ? logoNoBg : logo}
             alt="Pizza House Logo"
             className="nav-logo"
           />
