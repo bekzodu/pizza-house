@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import '../styles/HomeStyle.css';
 import Navbar from '../components/Navbar';
-import pizzaVideo from '../assets/pizza-house-video.mp4';
+import clip1 from '../assets/clip1.mp4';
 import background from '../assets/background.svg';
 import pizza from '../assets/pizza.svg'
 import logo from '../assets/logo-no-bg.svg';
@@ -168,7 +168,7 @@ const Home = () => {
           loop
           muted
           playsInline
-          src={pizzaVideo}
+          src={clip1}
         >
           Your browser does not support the video tag.
         </video>
