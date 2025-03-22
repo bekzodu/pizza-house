@@ -115,11 +115,17 @@ border: none;
 border-radius: 5px;
 cursor: pointer;
 transition: background-color 0.3s ease;
+text-decoration: none;
+display: inline-block;
+position: relative;
+z-index: 2;
+pointer-events: auto;
 }
 
 
 .orderButton:hover {
 background-color: #dd0000;
+color: white;
 }
 
 
@@ -200,6 +206,7 @@ flex-direction: row-reverse;
 flex: 1;
 padding: 2rem;
 position: relative;
+z-index: 1;
 }
 
 
@@ -277,6 +284,11 @@ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
 
 @media (max-width: 760px) {
+
+.bubble-background{
+  display: none;
+}
+
 .cateringRow {
   gap: 0;
   flex-direction: column;

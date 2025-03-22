@@ -4,15 +4,15 @@ import '../styles/NavbarStyle.css';
 import logo from '../assets/pizza-house-logo-round.svg';
 import logoNoBg from '../assets/logo-no-bg.svg';
 
-const Navbar = () => {
+const Navbar = ({ isMenuPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isContactPage = location.pathname === '/contact';
+  const isRequestPage = location.pathname === '/request';
 
   useEffect(() => {
-    // If we're on the contact page, set isScrolled to true immediately
-    if (isContactPage) {
+    if (isContactPage || isRequestPage) {
       setIsScrolled(true);
     } else {
       const handleScroll = () => {
@@ -23,14 +23,31 @@ const Navbar = () => {
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
     }
-  }, [isContactPage]);
+  }, [isContactPage, isRequestPage]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${isScrolled || isMenuPage || isRequestPage ? 'scrolled menu-page-nav' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="logo-container">
           <img 
-            src={isScrolled ? logoNoBg : logo}
+            src={isScrolled || isMenuPage || isRequestPage ? logoNoBg : logo}
             alt="Pizza House Logo"
             className="nav-logo"
           />
@@ -57,6 +74,18 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             Order
+          </a>
+        </div>
+
+        <div className="social-icons">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a href="https://google.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <i className="fab fa-google"></i>
           </a>
         </div>
       </div>

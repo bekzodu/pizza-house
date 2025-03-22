@@ -177,7 +177,7 @@ const Menu = () => {
 
   return (
     <div className="menu-page">
-      <Navbar />
+      <Navbar isMenuPage={true} />
       <div className="menu-container">
         <h1 className="menu-title">OUR MENU</h1>
         

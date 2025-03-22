@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import '../styles/HomeStyle.css';
 import Navbar from '../components/Navbar';
 import pizzaVideo from '../assets/pizza-house-video.mp4';
@@ -150,6 +151,15 @@ const Home = () => {
 
   return (
     <div className="container">
+      <Helmet>
+        <title>Pizza House - New York Style Pizza in Nashville</title>
+        <meta name="description" content="Experience authentic New York style pizza in Nashville. Hand-tossed pizzas, catering services, and private events. Order online for delivery or pickup." />
+        <meta name="keywords" content="pizza, New York style pizza, Nashville pizza, pizza delivery, pizza catering" />
+        <meta property="og:title" content="Pizza House - New York Style Pizza in Nashville" />
+        <meta property="og:description" content="Experience authentic New York style pizza in Nashville. Hand-tossed pizzas, catering services, and private events." />
+        <meta property="og:image" content="/path-to-your-logo-image.jpg" />
+        <meta property="og:url" content="https://yourwebsite.com" />
+      </Helmet>
       <Navbar />
       <section className="heroSection">
         <video
@@ -193,7 +203,7 @@ const Home = () => {
           <div className="cateringText">
             <h2>PARTY CATERING</h2>
             <p>Make your next business meeting or corporate event memorable with our premium catering services. We offer customizable packages that include our signature pizzas, appetizers, and salads, perfect for groups of any size.</p>
-            <button className="orderButton">Book Catering</button>
+            <Link to="/request" className="orderButton">Book Catering</Link>
           </div>
         </div>
 
@@ -205,7 +215,7 @@ const Home = () => {
             <div className="bubble-background"></div>
             <h2>Private Events</h2>
             <p>From birthday parties to wedding receptions, let us make your special day unforgettable. Our dedicated catering team ensures fresh, hot pizzas and impeccable service for all your private event needs.</p>
-            <button className="orderButton">Learn More</button>
+            <Link to="/request" className="orderButton" style={{ position: 'relative', zIndex: 2 }}>Learn More</Link>
           </div>
         </div>
       </section>

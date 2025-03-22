@@ -19,13 +19,19 @@
 }
 
 .about-hero h1 {
-  font-size: 4rem;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 4.5rem;
   margin-bottom: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  color: #FFD700; /* Golden yellow */
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #F8F8F8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .story-section {
@@ -39,9 +45,11 @@
 }
 
 .story-content h2 {
+  font-family: 'Permanent Marker', cursive;
   text-align: center;
   margin-bottom: 40px;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  color: #FF4B4B; /* Vibrant red */
 }
 
 .story-grid {
@@ -65,19 +73,23 @@
 }
 
 .story-card h3 {
+  font-family: 'Permanent Marker', cursive;
   margin-bottom: 15px;
-  color: #333;
+  color: #FF6B6B; /* Softer red */
+  font-size: 1.8rem;
 }
 
 .values-section {
-  background-color: #f8f8f8;
+  background-color: #FFF8E7; /* Warm cream background */
   padding: 80px 20px;
 }
 
 .values-section h2 {
+  font-family: 'Permanent Marker', cursive;
   text-align: center;
   margin-bottom: 60px;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  color: #FF4B4B; /* Vibrant red */
 }
 
 .values-grid {
@@ -93,12 +105,19 @@
   padding: 30px;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
 }
 
 .value-item h3 {
-  color: #333;
+  font-family: 'Permanent Marker', cursive;
+  color: #FF6B6B; /* Softer red */
   margin-bottom: 15px;
+  font-size: 1.6rem;
 }
 
 @media (max-width: 768px) {
