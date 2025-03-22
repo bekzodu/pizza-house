@@ -22,6 +22,7 @@ import chickenRancherSub from '../assets/PizzaHouse_ChickenRancherSub.jpg';
 import houseSalad from '../assets/PizzaHouse_HouseSalad.jpg';
 import meatLoversPizza from '../assets/PizzaHouse_MeatloversPizza.jpg';
 import mozzarellaSticks from '../assets/PizzaHouse_MozzarellaSticks.jpg';
+import ReviewsCarousel from '../components/ReviewsCarousel';
 
 const Home = () => {
   const carouselImages = [
@@ -98,6 +99,24 @@ const Home = () => {
     }
   ];
 
+  const reviews = [
+    {
+      name: "Teresa B.",
+      rating: 5,
+      text: "We went here last February 8. Food is good, Ambiance is great, Service is excellent. The owner is very nice and even upgraded my son's small pizza to a size where we can also have some. My son even said \"This is so legit.\" We'll definitely come back!"
+    },
+    {
+      name: "John D.",
+      rating: 5,
+      text: "Best pizza in town! The crust is perfectly crispy and the toppings are always fresh. Fantastic service too!"
+    },
+    {
+      name: "Sarah M.",
+      rating: 5,
+      text: "Amazing atmosphere and even better food. The staff goes above and beyond to make sure you have a great experience."
+    },
+  ];
+
   return (
     <div className="container">
       <Navbar />
@@ -172,6 +191,8 @@ const Home = () => {
       </section>
 
       <FoodCarousel items={foodItems} />
+      
+      <ReviewsCarousel reviews={reviews} />
     </div>
   );
 };
