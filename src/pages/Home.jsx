@@ -9,6 +9,7 @@ import logo from '../assets/logo-no-bg.svg';
 import catering from '../assets/catering.jpg';
 import catering2 from '../assets/catering2.jpg';
 import catering3 from '../assets/catering3.jpg';
+import cateringTruck from '../assets/catering-truck.svg';
 import breadsticks from '../assets/PizzaHouse_Breadsticks.jpg';
 import slider1 from '../assets/slider1.jpeg';
 import slider2 from '../assets/slider2.jpeg';
@@ -27,8 +28,41 @@ import ReviewsCarousel from '../components/ReviewsCarousel';
 import pizzaHouseLogoRound from '../assets/pizza-house-logo-round.svg';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
+import confettiPoppers from '../assets/confetti-poppers.svg';
 
 const Home = () => {
+  const truckRef = React.useRef(null);
+  const confettiRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const observerCallback = (entries, observer) => {
+      const [entry] = entries;
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.disconnect();
+      }
+    };
+
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const truckObserver = new IntersectionObserver(observerCallback, observerOptions);
+    const confettiObserver = new IntersectionObserver(observerCallback, observerOptions);
+
+    if (truckRef.current) {
+      truckObserver.observe(truckRef.current);
+    }
+    if (confettiRef.current) {
+      confettiObserver.observe(confettiRef.current);
+    }
+
+    return () => {
+      truckObserver.disconnect();
+      confettiObserver.disconnect();
+    };
+  }, []);
+
   const carouselImages = [
     {
       url: catering3,
@@ -202,6 +236,12 @@ const Home = () => {
           </div>
           <div className="cateringText">
             <h2>PARTY CATERING</h2>
+            <img 
+              ref={truckRef}
+              src={cateringTruck} 
+              alt="Catering Truck" 
+              className="catering-truck" 
+            />
             <p>Make your next business meeting or corporate event memorable with our premium catering services. We offer customizable packages that include our signature pizzas, appetizers, and salads, perfect for groups of any size.</p>
             <Link to="/request" className="orderButton">Book Catering</Link>
           </div>
@@ -214,6 +254,12 @@ const Home = () => {
           <div className="cateringText">
             <div className="bubble-background"></div>
             <h2>Private Events</h2>
+            <img 
+              ref={confettiRef}
+              src={confettiPoppers} 
+              alt="Confetti Poppers" 
+              className="confetti-poppers" 
+            />
             <p>From birthday parties to wedding receptions, let us make your special day unforgettable. Our dedicated catering team ensures fresh, hot pizzas and impeccable service for all your private event needs.</p>
             <Link to="/request" className="orderButton" style={{ position: 'relative', zIndex: 2 }}>Learn More</Link>
           </div>

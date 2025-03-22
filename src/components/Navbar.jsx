@@ -53,15 +53,29 @@ const Navbar = ({ isMenuPage }) => {
           />
         </Link>
 
-        <button 
-          className={`hamburger ${isMenuOpen ? 'active' : ''}`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div className="navbar-right">
+          <div className="social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/pizzahousetn/" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="https://g.co/kgs/WUA6dQC" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <i className="fab fa-google"></i>
+            </a>
+          </div>
+
+          <button 
+            className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
 
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <Link to="/menu" className="nav-item">Menu</Link>
@@ -74,18 +88,6 @@ const Navbar = ({ isMenuPage }) => {
             rel="noopener noreferrer"
           >
             Order
-          </a>
-        </div>
-
-        <div className="social-icons">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="https://google.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <i className="fab fa-google"></i>
           </a>
         </div>
       </div>

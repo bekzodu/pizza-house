@@ -534,3 +534,38 @@ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 .food-item-order-btn:hover {
   background-color: #ff3333;
 }
+
+.catering-truck {
+  width: 100px;
+  height: auto;
+  margin: 10px 0;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.catering-truck.animate {
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.confetti-poppers {
+  width: 100px;
+  height: auto;
+  margin: 10px 0;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.confetti-poppers.animate {
+  animation: slideIn 1.5s ease-out forwards;
+}
