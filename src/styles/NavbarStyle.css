@@ -184,4 +184,16 @@
         margin-right: 0;
     }
 }
+
+.contact-page .navbar .nav-item {
+    color: #000000;
+}
+
+.contact-page .navbar .nav-item:hover {
+    color: #333333;
+}
+
+.contact-page .navbar .hamburger span {
+    background-color: #000000;
+}
   

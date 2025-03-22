@@ -1,0 +1,121 @@
+.footer {
+  position: relative;
+  color: white;
+  font-family: Arial, sans-serif;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85); /* Dark overlay */
+  z-index: 1;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2; /* Place content above overlay */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-section p {
+  margin: 8px 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.contact-header {
+  margin-top: 30px;
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  background-color: rgba(26, 61, 61, 0.9);
+  padding-bottom: 20px;
+
+}
+
+/* Add this to center the content within footer-bottom */
+.footer-bottom p,
+.footer-bottom a {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-bottom p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bekxod-logo {
+  height: 20px;
+  width: auto;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: auto;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}

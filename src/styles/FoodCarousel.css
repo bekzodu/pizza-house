@@ -1,5 +1,5 @@
 .food-carousel {
-  background-color: #e95048;
+  background-color: #ffffff;
   padding: 1rem 0;
   width: 100%;
 }
@@ -34,6 +34,7 @@
   position: absolute;
   padding: 0 10px;
   will-change: transform;
+  cursor: pointer;
 }
 
 .food-item img {
@@ -42,6 +43,54 @@
   object-fit: cover;
   border-radius: 70% 30% 50% 50% / 50% 45% 55% 50%;
   animation: blobby 8s ease-in-out infinite;
+}
+
+.food-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 10px;  /* Account for the padding */
+  right: 10px; /* Account for the padding */
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 70% 30% 50% 50% / 50% 45% 55% 50%;
+  animation: blobby 8s ease-in-out infinite;
+}
+
+.food-item:hover .food-item-overlay {
+  opacity: 1;
+}
+
+.food-item-name {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.food-item-price {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.food-item-order-btn {
+  padding: 8px 16px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.food-item-order-btn:hover {
+  background-color: #ff3333;
 }
 
 .nav-button {

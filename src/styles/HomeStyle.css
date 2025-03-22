@@ -379,3 +379,146 @@ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     height: 60vh;
   }
 }
+
+.locationSection {
+  display: flex;
+  gap: 40px;
+}
+
+.locationInfo, .locationMap {
+  flex: 1;
+}
+
+.locationMap {
+  width: 60%;
+  position: relative;
+}
+
+.locationMap iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  border: none;
+}
+
+.locationInfo {
+  width: 40%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.locationInfo h2 {
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  font-family: "Permanent Marker", cursive;
+}
+
+.locationDescription {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.addressDetails {
+  margin-top: 1rem;
+}
+
+.addressDetails p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.locationLogo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Add responsive styling */
+@media screen and (max-width: 760px) {
+  .locationSection {
+    flex-direction: column;
+    padding: 0px;
+    gap: 0px;
+  }
+  .locationInfo{
+    width: 100%;
+    padding: 0;
+  }
+
+  .locationMap {
+    height: 300px;  /* Set a specific height for mobile */
+    width: 100%;
+  }
+
+  .locationInfo {
+    text-align: center;
+  }
+
+  .addressDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .locationLogo {
+    width: 170px;  /* Make logo slightly smaller on mobile */
+    margin-bottom: 15px;
+  }
+}
+
+.food-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.food-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.food-item:hover .food-item-overlay {
+  opacity: 1;
+}
+
+.food-item-name {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.food-item-price {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.food-item-order-btn {
+  padding: 8px 16px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.food-item-order-btn:hover {
+  background-color: #ff3333;
+}

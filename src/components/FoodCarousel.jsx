@@ -2,44 +2,39 @@ import React, { useState, useEffect } from 'react';
 import '../styles/FoodCarousel.css';
 
 const FoodCarousel = ({ items }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(items.length);
   const [slides, setSlides] = useState([]);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   
   // Create the extended array of items for infinite scroll
   useEffect(() => {
-    // Duplicate the items to create a seamless loop
     setSlides([...items, ...items, ...items]);
   }, [items]);
 
   const nextSlide = () => {
-    setCurrentIndex(prev => {
-      const next = prev + 1;
-      // If we're at the end of the middle set, jump back to the middle
-      if (next >= items.length * 2) {
-        return items.length;
-      }
-      return next;
-    });
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentIndex(prev => prev + 1);
   };
 
   const prevSlide = () => {
-    setCurrentIndex(prev => {
-      const next = prev - 1;
-      // If we're at the start of the middle set, jump to the end of the middle
-      if (next < items.length) {
-        return items.length * 2 - 1;
-      }
-      return next;
-    });
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentIndex(prev => prev - 1);
   };
 
-  // Handle the transition end to create the infinite effect
   const handleTransitionEnd = () => {
+    setIsTransitioning(false);
+    // Reset position without animation when reaching the ends
     if (currentIndex >= items.length * 2) {
       setCurrentIndex(items.length);
     } else if (currentIndex < items.length) {
-      setCurrentIndex(items.length * 2 - 1);
+      setCurrentIndex(items.length * 2);
     }
+  };
+
+  const handleOrder = (url) => {
+    window.location.href = url;
   };
 
   return (
@@ -56,11 +51,23 @@ const FoodCarousel = ({ items }) => {
               className="food-item"
               style={{
                 transform: `translateX(${(index - currentIndex) * 100}%)`,
-                transition: 'transform 0.5s ease-in-out',
+                transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none',
               }}
               onTransitionEnd={handleTransitionEnd}
             >
               <img src={item.image} alt={item.alt} />
+              <div className="food-item-overlay">
+                <h3 className="food-item-name">{item.name}</h3>
+                <p className="food-item-price">
+                  ${item.priceLabel || item.price.toFixed(2)}
+                </p>
+                <button 
+                  className="food-item-order-btn"
+                  onClick={() => handleOrder(item.orderUrl)}
+                >
+                  Order Now
+                </button>
+              </div>
             </div>
           ))}
         </div>

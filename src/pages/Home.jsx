@@ -23,6 +23,9 @@ import houseSalad from '../assets/PizzaHouse_HouseSalad.jpg';
 import meatLoversPizza from '../assets/PizzaHouse_MeatloversPizza.jpg';
 import mozzarellaSticks from '../assets/PizzaHouse_MozzarellaSticks.jpg';
 import ReviewsCarousel from '../components/ReviewsCarousel';
+import pizzaHouseLogoRound from '../assets/pizza-house-logo-round.svg';
+import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const carouselImages = [
@@ -63,39 +66,67 @@ const Home = () => {
   const foodItems = [
     {
       image: chickenWings,
-      alt: "6 Piece Chicken Wings"
+      alt: "6 Piece Chicken Wings",
+      name: "Chicken Wings",
+      price: 10.33,
+      orderUrl: "https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c"
     },
     {
       image: breadsticks,
-      alt: "Breadsticks"
+      alt: "Breadsticks",
+      name: "Breadsticks",
+      price: 7.23,
+      orderUrl: "https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c"
     },
     {
       image: caesarSalad,
-      alt: "Caesar Salad"
+      alt: "Caesar Salad",
+      name: "Caesar Salad",
+      price: 8.26,
+      orderUrl: "https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c"
     },
     {
       image: calzone,
-      alt: "Calzone"
+      alt: "Calzone",
+      name: "Calzone",
+      price: 14.47,
+      orderUrl: "https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c"
     },
     {
       image: cheesyBreadsticks,
-      alt: "Cheesy Breadsticks"
+      alt: "Cheesy Breadsticks",
+      name: "Cheesy Breadsticks",
+      price: 9.30,
+      orderUrl: "https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c"
     },
     {
       image: chickenRancherSub,
-      alt: "Chicken Rancher Sub"
+      alt: "Chicken Rancher Sub",
+      name: "Chicken Rancher Sub",
+      price: 9.30,
+      orderUrl: "https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c"
     },
     {
       image: houseSalad,
-      alt: "House Salad"
+      alt: "House Salad",
+      name: "House Salad",
+      price: 6.19,
+      orderUrl: "https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c"
     },
     {
       image: meatLoversPizza,
-      alt: "Meat Lovers Pizza"
+      alt: "Meat Lovers Pizza",
+      name: "Meat Lovers Pizza",
+      price: 13.44,
+      priceLabel: "from $13.44",
+      orderUrl: "https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c"
     },
     {
       image: mozzarellaSticks,
-      alt: "Mozzarella Sticks"
+      alt: "Mozzarella Sticks",
+      name: "Mozzarella Sticks",
+      price: 8.26,
+      orderUrl: "https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c"
     }
   ];
 
@@ -150,7 +181,7 @@ const Home = () => {
           <h2>Classic New York Style Pizza</h2>
           <p>Experience the authentic taste of the Big Apple with our hand-tossed, perfectly foldable slices. Made with our signature sauce and premium toppings on a crispy-yet-chewy crust.</p>
           <p>Each pizza is crafted with love using traditional techniques passed down through generations, ensuring you get the most authentic New York pizza experience outside of Manhattan.</p>
-          <button className="orderButton">Read More</button>
+          <Link to="/about" className="orderButton">Read More</Link>
         </div>
       </section>
 
@@ -193,6 +224,34 @@ const Home = () => {
       <FoodCarousel items={foodItems} />
       
       <ReviewsCarousel reviews={reviews} />
+
+      <section className="locationSection">
+        <div className="locationInfo">
+          <h2>FIND US HERE</h2>
+          <p className="locationDescription">Visit us for the best New York style pizza in Nashville!</p>
+          <div className="addressDetails">
+            <img 
+              src={pizzaHouseLogoRound} 
+              alt="Pizza House Logo" 
+              className="locationLogo" 
+            />
+            <p>63 E Thompson Ln #103</p>
+            <p>Nashville, TN 37211</p>
+          </div>
+        </div>
+        <div className="locationMap">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.328158965006!2d-86.72927502332678!3d36.109862172452026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88646fc4c0546811%3A0x2c8a25b6d00b2527!2sPizza%20House!5e0!3m2!1sen!2sus!4v1742620923037!5m2!1sen!2sus" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 };
