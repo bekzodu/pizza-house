@@ -7,6 +7,7 @@ import logoNoBg from '../assets/logo-no-bg.svg';
 const Navbar = ({ isMenuPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const location = useLocation();
   const isContactPage = location.pathname === '/contact';
   const isRequestPage = location.pathname === '/request';
@@ -42,8 +43,17 @@ const Navbar = ({ isMenuPage }) => {
     };
   }, []);
 
+  useEffect(() => {
+    // Small delay to ensure the initial hidden state is rendered
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <nav className={`navbar ${isScrolled || isMenuPage || isRequestPage ? 'scrolled menu-page-nav' : ''}`}>
+    <nav className={`navbar ${isScrolled || isMenuPage || isRequestPage ? 'scrolled menu-page-nav' : ''} ${isLoaded ? 'loaded' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="logo-container">
           <img 

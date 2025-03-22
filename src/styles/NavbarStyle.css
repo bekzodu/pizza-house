@@ -1,15 +1,21 @@
 .navbar {
     position: fixed;
-    top: 50px;
+    top: -100px; /* Start above the viewport */
     left: 0;
     right: 0;
     height: 80px;
     background-color: transparent;
     z-index: 1000;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
 }
 
-.navbar.scrolled {
+.navbar.loaded {
+    top: 50px; /* Your original top position */
+    opacity: 1;
+}
+
+.navbar.scrolled.loaded {
     top: 0;
     padding: 1.5rem;
     background-color: rgba(255, 255, 255);
@@ -112,8 +118,8 @@
 }
 
 @media (max-width: 760px) {
-    .navbar {
-        top: 0;
+    .navbar.loaded{
+        top: 0 !important;
     }
 
     .navbar-container {

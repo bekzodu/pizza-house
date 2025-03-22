@@ -4,7 +4,7 @@ import '../styles/HomeStyle.css';
 import Navbar from '../components/Navbar';
 import clip1 from '../assets/clip1.mp4';
 import background from '../assets/background.svg';
-import pizza from '../assets/pizza.svg'
+import pizza from '../assets/pizza.svg';
 import logo from '../assets/logo-no-bg.svg';
 import catering from '../assets/catering.jpg';
 import catering2 from '../assets/catering2.jpg';
@@ -29,10 +29,14 @@ import pizzaHouseLogoRound from '../assets/pizza-house-logo-round.svg';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import confettiPoppers from '../assets/confetti-poppers.svg';
+import pizzaPng from '../assets/pizza.png';
 
 const Home = () => {
   const truckRef = React.useRef(null);
   const confettiRef = React.useRef(null);
+  const pizzaRef = React.useRef(null);
+  const catering3Ref = React.useRef(null);
+  const catering2Ref = React.useRef(null);
 
   React.useEffect(() => {
     const observerCallback = (entries, observer) => {
@@ -49,6 +53,9 @@ const Home = () => {
 
     const truckObserver = new IntersectionObserver(observerCallback, observerOptions);
     const confettiObserver = new IntersectionObserver(observerCallback, observerOptions);
+    const pizzaObserver = new IntersectionObserver(observerCallback, observerOptions);
+    const catering3Observer = new IntersectionObserver(observerCallback, observerOptions);
+    const catering2Observer = new IntersectionObserver(observerCallback, observerOptions);
 
     if (truckRef.current) {
       truckObserver.observe(truckRef.current);
@@ -56,10 +63,22 @@ const Home = () => {
     if (confettiRef.current) {
       confettiObserver.observe(confettiRef.current);
     }
+    if (pizzaRef.current) {
+      pizzaObserver.observe(pizzaRef.current);
+    }
+    if (catering3Ref.current) {
+      catering3Observer.observe(catering3Ref.current);
+    }
+    if (catering2Ref.current) {
+      catering2Observer.observe(catering2Ref.current);
+    }
 
     return () => {
       truckObserver.disconnect();
       confettiObserver.disconnect();
+      pizzaObserver.disconnect();
+      catering3Observer.disconnect();
+      catering2Observer.disconnect();
     };
   }, []);
 
@@ -210,11 +229,15 @@ const Home = () => {
     
       <section className="splitSection">
         <div className="imageContainer">
-          <img
-            src={pizza}
-            alt="New York Style Pizza"
-            className="splitImage"
-          />
+          <picture>
+            <source media="(min-width: 761px)" srcSet={pizza} />
+            <img
+              ref={pizzaRef}
+              src={pizzaPng}
+              alt="New York Style Pizza"
+              className="splitImage"
+            />
+          </picture>
         </div>
         <div className="textContainer">
           <img
@@ -232,7 +255,12 @@ const Home = () => {
       <section className="cateringSection">
         <div className="cateringRow">
           <div className="cateringImage">
-            <img src={catering3} alt="Corporate Catering Service" />
+            <img 
+              ref={catering3Ref}
+              src={catering3} 
+              alt="Corporate Catering Service" 
+              className="catering-slide-image"
+            />
           </div>
           <div className="cateringText">
             <h2>PARTY CATERING</h2>
@@ -249,7 +277,12 @@ const Home = () => {
 
         <div className="cateringRow reverse">
           <div className="cateringImage">
-            <img src={catering2} alt="Private Event Catering" />
+            <img 
+              ref={catering2Ref}
+              src={catering2} 
+              alt="Private Event Catering" 
+              className="catering-slide-image"
+            />
           </div>
           <div className="cateringText">
             <div className="bubble-background"></div>
