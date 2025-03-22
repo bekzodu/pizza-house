@@ -3,17 +3,21 @@ import '../styles/ReviewsCarousel.css';
 
 const ReviewsCarousel = ({ reviews }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const SCROLL_INTERVAL = 3500;
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
-      );
-    }, SCROLL_INTERVAL);
+    let interval;
+    if (!isPaused) {
+      interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => 
+          prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
+        );
+      }, SCROLL_INTERVAL);
+    }
 
     return () => clearInterval(interval);
-  }, [reviews.length]);
+  }, [reviews.length, isPaused]);
 
   const nextReview = () => {
     setCurrentIndex((prevIndex) => 
@@ -29,6 +33,10 @@ const ReviewsCarousel = ({ reviews }) => {
 
   const goToReview = (index) => {
     setCurrentIndex(index);
+  };
+
+  const togglePause = () => {
+    setIsPaused(!isPaused);
   };
 
   return (
@@ -74,8 +82,11 @@ const ReviewsCarousel = ({ reviews }) => {
         ))}
       </div>
 
-      <button className="pause-button">
-        ⏸
+      <button 
+        className={`pause-button ${isPaused ? 'paused' : ''}`}
+        onClick={togglePause}
+      >
+        {isPaused ? '▶' : '⏸'}
       </button>
     </div>
   );
