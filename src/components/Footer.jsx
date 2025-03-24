@@ -1,48 +1,37 @@
 import React from 'react';
 import '../styles/Footer.css';
+import { Link } from 'react-router-dom';
 import bekxodLogo from '../assets/bekxod-short-logo.svg';
-import pizzaBg from '../assets/pizza.jpg';
+import pizzaLogo from '../assets/pizza-house-logo-round.svg';
 
 const Footer = () => {
   return (
-    <footer className="footer" style={{ backgroundImage: `url(${pizzaBg})` }}>
-      <div className="footer-overlay"></div>
+    <footer className="footer">
       <div className="footer-content">
-        <div className="footer-section">
-          <h3>LOCATION</h3>
-          <p>63 E Thompson Ln #103</p>
-          <p>Nashville, TN</p>
-          <p>37211</p>
-        </div>
-
-        <div className="footer-section">
-          <h3>HOURS</h3>
-          <p>Monday - Sunday</p>
-          <p>10:00 AM - 10:00 PM</p>
-        </div>
-
-        <div className="footer-section">
-          <h3>CONTACT US</h3>
-          <p>(615) 724-8888</p>
-          <p>manager@pizzahouse.com</p>
-        </div>
-      </div>
-
-      <div className="footer-bottom">
-        <p>
-          Powered by: 
-          <a href="https://bekxod.com" target="_blank" rel="noopener noreferrer">
-            <img src={bekxodLogo} alt="Bekxod Logo" className="bekxod-logo" />
+        <img src={pizzaLogo} alt="Pizza House Logo" className="footer-logo" />
+        <div className="footer-nav">
+          <Link to="/menu">Menu</Link>
+          <Link to="/about">About</Link>
+          <Link to="/testimonials">Testimonials</Link>
+          <Link to="/contact">Contact</Link>
+          <a 
+            href="https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Order
           </a>
-        </p>
-        <a 
-          href="https://bekxod.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="footer-link"
-        >
-          Website design, Social Media marketing and Email marketing provided by Bekxod.
-        </a>
+        </div>
+        
+        <div className="footer-bottom">
+          <p>
+            developed by{' '}
+            <a href="https://bekxod.com" target="_blank" rel="noopener noreferrer">
+              bekxod.com
+            </a>
+            <img src={bekxodLogo} alt="Bekxod Logo" className="bekxod-logo" />
+          </p>
+        </div>
       </div>
     </footer>
   );

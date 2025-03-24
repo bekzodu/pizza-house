@@ -71,7 +71,7 @@ const Contact = () => {
               <p>
                 <strong>Address:</strong><br />
                 Pizza House<br />
-                Nashville, TN
+                 63 Thompson Lane #103 <br /> Nashville, TN
               </p>
             </div>
           </div>

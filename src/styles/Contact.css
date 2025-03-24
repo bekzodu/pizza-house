@@ -1,19 +1,13 @@
 .contact-page {
-  min-height: 100vh;
+  background-color: #FF9800;
+  min-height: 120vh;
   padding-top: 120px; /* Increased padding from 80px to 120px */
-  background: linear-gradient(90deg, 
-    #009246 0%, /* Italian green */
-    #009246 33.33%,
-    #ffffff 33.33%,
-    #ffffff 66.66%,
-    #ce2b37 66.66%, /* Italian red */
-    #ce2b37 100%
-  );
 }
 
 .contact-container {
+  font-family: permanent marker;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 40px auto;
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
   border-radius: 12px;
@@ -59,6 +53,7 @@
 }
 
 .contact-details p {
+  color: black;
   margin-bottom: 1rem;
   line-height: 1.6;
 }

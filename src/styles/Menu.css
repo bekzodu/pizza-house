@@ -44,16 +44,15 @@
   font-size: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.category-btn.primary {
-  background-color: #f4d03f;
-  color: #333;
-}
-
-.category-btn.secondary {
   background-color: #006666;
   color: white;
+}
+
+.category-btn.active {
+  background-color: #f4d03f;
+  color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .category-btn:hover {
@@ -201,13 +200,6 @@
   margin-bottom: 3rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #edf2f7;
-}
-
-.category-btn.active {
-  background-color: #004444;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .menu-card::before {

@@ -49,7 +49,7 @@
   text-align: center;
   margin-bottom: 40px;
   font-size: 3rem;
-  color: #FF4B4B; /* Vibrant red */
+  color: #000000; /* Vibrant red */
 }
 
 .story-grid {
@@ -75,12 +75,12 @@
 .story-card h3 {
   font-family: 'Permanent Marker', cursive;
   margin-bottom: 15px;
-  color: #FF6B6B; /* Softer red */
+  color: #f98e14; /* Softer red */
   font-size: 1.8rem;
 }
 
 .values-section {
-  background-color: #FFF8E7; /* Warm cream background */
+  background-color: #ff951c; /* Warm cream background */
   padding: 80px 20px;
 }
 
@@ -89,7 +89,7 @@
   text-align: center;
   margin-bottom: 60px;
   font-size: 3rem;
-  color: #FF4B4B; /* Vibrant red */
+  color: #000000; /* Vibrant red */
 }
 
 .values-grid {
@@ -115,9 +115,15 @@
 
 .value-item h3 {
   font-family: 'Permanent Marker', cursive;
-  color: #FF6B6B; /* Softer red */
+  color: #000000; /* Softer red */
   margin-bottom: 15px;
   font-size: 1.6rem;
+}
+
+.value-icon {
+  width: 60px;
+  height: 60px;
+  margin: 15px 0;
 }
 
 @media (max-width: 768px) {

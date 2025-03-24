@@ -1,6 +1,6 @@
 .reviews-container {
   padding: 4rem 2rem;
-  background-color: #d72d3b;
+  background: linear-gradient(to bottom, #ff880d 70%, white);
   color: white;
   text-align: center;
   height: 600px;

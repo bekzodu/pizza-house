@@ -5,6 +5,10 @@ import Footer from '../components/Footer';
 import catering from '../assets/catering.jpg';
 import catering2 from '../assets/catering2.jpg';
 import catering3 from '../assets/catering3.jpg';
+import qualityIcon from '../assets/quality.svg';
+import traditionIcon from '../assets/tradition.svg';
+import communityIcon from '../assets/community.svg';
+import serviceIcon from '../assets/service.svg';
 
 const About = () => {
   return (
@@ -48,18 +52,22 @@ const About = () => {
         <div className="values-grid">
           <div className="value-item">
             <h3>Quality</h3>
+            <img src={qualityIcon} alt="Quality icon" className="value-icon" />
             <p>We never compromise on ingredients or preparation methods. Every pizza is made with the finest ingredients and attention to detail.</p>
           </div>
           <div className="value-item">
             <h3>Tradition</h3>
+            <img src={traditionIcon} alt="Tradition icon" className="value-icon" />
             <p>Our recipes and techniques honor the authentic New York pizza-making tradition, bringing a true slice of the Big Apple to Nashville.</p>
           </div>
           <div className="value-item">
             <h3>Community</h3>
+            <img src={communityIcon} alt="Community icon" className="value-icon" />
             <p>We believe in being more than just a restaurant - we're a gathering place for friends, families, and pizza lovers.</p>
           </div>
           <div className="value-item">
             <h3>Service</h3>
+            <img src={serviceIcon} alt="Service icon" className="value-icon" />
             <p>Our team is dedicated to providing warm, friendly service that makes every customer feel like part of the Pizza House family.</p>
           </div>
         </div>

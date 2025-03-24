@@ -33,7 +33,7 @@
 display: flex;
 min-height: 600px;
 width: 100%;
-background-color: #F8F4D6;
+background-color: #ffffff;
 padding: 4rem 0;
 position: relative;
 }
@@ -51,7 +51,7 @@ content: '';
 position: absolute;
 width: 90%;
 height: 90%;
-background-color: rgba(218, 201, 14, 0.204);
+background-color: rgba(255, 169, 13, 0.5);
 border-radius: 50%;
 top: 50%;
 left: 50%;
@@ -125,7 +125,7 @@ font-weight: 500;
 .orderButton {
 padding: 1rem 2rem;
 font-size: 1.1rem;
-background-color: #ff0000;
+background-color: #ff880d;
 color: white;
 border: none;
 border-radius: 5px;
@@ -140,7 +140,7 @@ pointer-events: auto;
 
 
 .orderButton:hover {
-background-color: #dd0000;
+background-color: #c76300;
 color: white;
 }
 
@@ -270,7 +270,7 @@ z-index: 1;
 
 .cateringText h2 {
 font-size: 4.5rem;
-color: #111;
+color: #ffffff;
 margin-bottom: 1.5rem;
 font-weight: 200;
 font-family: "Permanent Marker", cursive;
@@ -340,7 +340,7 @@ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
 
 .orderOnlineSection {
-  background-color: #f5e98c;
+  background-color: #ffffff;
   padding: 2rem 2rem;
   text-align: center;
   display: flex;
@@ -435,7 +435,7 @@ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #fffffe;
 }
 
 .locationInfo h2 {

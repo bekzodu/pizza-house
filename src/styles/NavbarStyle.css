@@ -164,7 +164,7 @@
         height: calc(40vh - 80px);
         width: 100%;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: #ff9600;
         padding: 0;
         transition: left 0.3s ease;
         justify-content: space-evenly;
@@ -177,7 +177,9 @@
     }
 
     .nav-links a.nav-item {
-        color: white !important;
+        color: rgb(0, 0, 0) !important;
+        border: solid;
+        font-family: permanent marker;
         font-weight: 700;
         font-size: 1.5rem;
         width: 100%;

@@ -17,31 +17,13 @@ const Navbar = ({ isMenuPage }) => {
       setIsScrolled(true);
     } else {
       const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        setIsScrolled(scrollPosition > 50);
+        setIsScrolled(window.scrollY > 50);
       };
 
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
     }
   }, [isContactPage, isRequestPage]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     // Small delay to ensure the initial hidden state is rendered

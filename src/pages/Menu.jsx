@@ -185,7 +185,7 @@ const Menu = () => {
           {menuCategories.map(category => (
             <button
               key={category.id}
-              className={`category-btn ${category.color} ${activeCategory === category.id ? 'active' : ''}`}
+              className={`category-btn ${activeCategory === category.id ? 'active' : 'secondary'}`}
               onClick={() => setActiveCategory(category.id)}
             >
               {category.name}
