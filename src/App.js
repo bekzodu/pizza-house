@@ -18,7 +18,7 @@ function App() {
         <title>Pizza House - Authentic New York Style Pizza</title>
         <meta name="description" content="Experience authentic New York style pizza at Pizza House. Fresh ingredients, traditional recipes, and perfect crust. Order online or visit us today!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://yourwebsite.com" />
+        <link rel="canonical" href="https://pizzahouse103.com" />
       </Helmet>
       <ScrollToTop />
       <div className="App">
