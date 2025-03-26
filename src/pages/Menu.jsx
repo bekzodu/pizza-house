@@ -45,6 +45,12 @@ const menuData = {
           price: 15.99,
           description: "8 slices • 220 cal/slice",
           toppingPrice: 1.99
+        },
+        { 
+          name: "Party Size 20\"", 
+          price: 20.99,
+          description: "12 slices • 240 cal/slice",
+          toppingPrice: 2.25
         }
       ]
     },
@@ -100,7 +106,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -111,7 +118,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -122,7 +130,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -133,7 +142,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -144,7 +154,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -155,7 +166,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -166,7 +178,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -177,7 +190,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -188,7 +202,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -199,7 +214,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -210,7 +226,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -221,7 +238,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -232,7 +250,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -243,7 +262,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         },
         {
@@ -254,7 +274,8 @@ const menuData = {
             small: 12.99,
             medium: 14.99,
             large: 17.99,
-            xlarge: 19.99
+            xlarge: 19.99,
+            party: 25.99
           }
         }
       ]
@@ -510,10 +531,15 @@ const Menu = () => {
                 <h3>{item.name}</h3>
                 {item.prices ? (
                   <div className="price-list">
-                    <span className="price">S: ${item.prices.small}</span>
-                    <span className="price">M: ${item.prices.medium}</span>
-                    <span className="price">L: ${item.prices.large}</span>
-                    <span className="price">XL: ${item.prices.xlarge}</span>
+                    <div className="price-row">
+                      <span className="price">S: ${item.prices.small}</span>
+                      <span className="price">M: ${item.prices.medium}</span>
+                      <span className="price">L: ${item.prices.large}</span>
+                    </div>
+                    <div className="price-row">
+                      <span className="price">XL: ${item.prices.xlarge}</span>
+                      <span className="price">Party: ${item.prices.party}</span>
+                    </div>
                   </div>
                 ) : (
                   <span className="price">${item.price.toFixed(2)}</span>
@@ -572,10 +598,15 @@ const Menu = () => {
                 <h3>{item.name}</h3>
                 {item.prices ? (
                   <div className="price-list">
-                    <span className="price">S: ${item.prices.small}</span>
-                    <span className="price">M: ${item.prices.medium}</span>
-                    <span className="price">L: ${item.prices.large}</span>
-                    <span className="price">XL: ${item.prices.xlarge}</span>
+                    <div className="price-row">
+                      <span className="price">S: ${item.prices.small}</span>
+                      <span className="price">M: ${item.prices.medium}</span>
+                      <span className="price">L: ${item.prices.large}</span>
+                    </div>
+                    <div className="price-row">
+                      <span className="price">XL: ${item.prices.xlarge}</span>
+                      <span className="price">Party: ${item.prices.party}</span>
+                    </div>
                   </div>
                 ) : (
                   <span className="price">${item.price.toFixed(2)}</span>

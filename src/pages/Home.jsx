@@ -303,7 +303,7 @@ const Home = () => {
         <h1>ORDER ONLINE</h1>
         <p className="tagline">Our kitchen is just a click away!</p>
         <p className="description">Craving authentic Italian flavors without leaving the comfort of your home?</p>
-        <button className="orderButton">ORDER</button>
+        <button className="orderButton" onClick={() => window.location.href = "https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c"}>ORDER</button>
       </section>
 
       <section className="imageCarouselSection">

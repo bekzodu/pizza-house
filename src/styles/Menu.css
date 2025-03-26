@@ -129,10 +129,15 @@
 
 .price-list {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  flex-direction: column;
+  gap: 0.5rem;
   min-width: 200px;
+}
+
+.price-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
 }
 
 .price {
@@ -244,8 +249,11 @@
 
   .price-list {
     min-width: 100%;
-    justify-content: flex-start;
     margin-top: 0.5rem;
+  }
+  
+  .price-row {
+    justify-content: flex-start;
   }
 }
 
@@ -342,4 +350,25 @@
 .menu-item.delivery {
   background-color: #f8f8f8;
   border-left: 4px solid #2196F3;
+}
+
+.view-all-btn {
+  background-color: #006666;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.view-all-btn:hover {
+  background-color: #f4d03f;
+  color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

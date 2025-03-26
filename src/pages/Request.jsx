@@ -62,15 +62,15 @@ const Request = () => {
         <div className="contact-info">
           <div>
             <h3>Phone</h3>
-            <p>(555) 123-4567</p>
+            <p>(615) 724-8888</p>
           </div>
           <div>
             <h3>Email</h3>
-            <p>events@wingit.com</p>
+            <p>pizzahouse103@gmail.com</p>
           </div>
           <div>
             <h3>Hours</h3>
-            <p>Monday - Friday: 10AM - 6PM</p>
+            <p>Monday - Friday: 10AM - 10PM</p>
           </div>
         </div>
       </section>
