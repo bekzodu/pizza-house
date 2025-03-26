@@ -47,9 +47,6 @@ const Navbar = ({ isMenuPage }) => {
 
         <div className="navbar-right">
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <i className="fab fa-facebook-f"></i>
-            </a>
             <a href="https://www.instagram.com/pizzahousetn/" target="_blank" rel="noopener noreferrer" className="social-icon">
               <i className="fab fa-instagram"></i>
             </a>

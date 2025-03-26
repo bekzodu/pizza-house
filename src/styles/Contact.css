@@ -53,7 +53,7 @@
 }
 
 .contact-details p {
-  color: black;
+  color: black !important;
   margin-bottom: 1rem;
   line-height: 1.6;
 }

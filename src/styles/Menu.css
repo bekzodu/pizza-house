@@ -64,6 +64,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  width: 100%;
 }
 
 .menu-card {
@@ -86,10 +87,19 @@
   color: #006666;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  text-align: center;
+  text-align: left;
   border-bottom: 2px solid rgba(0, 102, 102, 0.2);
   padding-bottom: 0.5rem;
   font-family: 'Playfair Display', serif;
+}
+
+.section-description {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: -1rem 0 1.5rem 0;
+  text-align: left;
+  font-style: italic;
 }
 
 .menu-item {
@@ -97,20 +107,32 @@
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   position: relative;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .item-header {
-  gap: 5em;
+  gap: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .item-header h3 {
   font-size: 1.2rem;
   color: #333;
   margin: 0;
+  text-align: left;
+}
+
+.price-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-width: 200px;
 }
 
 .price {
@@ -118,6 +140,8 @@
   color: #006666;
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .description {
@@ -125,6 +149,61 @@
   font-size: 0.9rem;
   line-height: 1.4;
   margin: 0;
+  text-align: left;
+}
+
+.topping-price {
+  color: #006666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0.25rem 0 0 0;
+  text-align: left;
+  font-style: italic;
+}
+
+.toppings-section {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.toppings-title {
+  color: #006666;
+  font-size: 1.2rem;
+  margin: 1.5rem 0 1rem;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+}
+
+.toppings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.topping-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.topping-name {
+  color: #333;
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.topping-calories {
+  color: #666;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.topping-note {
+  color: #006666;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-left: 0.5rem;
 }
 
 .item-image {
@@ -161,6 +240,12 @@
 
   .menu-title {
     font-size: 2.5rem;
+  }
+
+  .price-list {
+    min-width: 100%;
+    justify-content: flex-start;
+    margin-top: 0.5rem;
   }
 }
 
@@ -212,4 +297,49 @@
   border: 1px solid rgba(0, 102, 102, 0.1);
   pointer-events: none;
   border-radius: 8px;
+}
+
+.menu-sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.menu-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.menu-section-full {
+  width: 100%;
+}
+
+.menu-section-full .menu-card {
+  width: 100%;
+  max-width: none;
+}
+
+.menu-section-full .toppings-grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-style: italic;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.menu-item.carry-out {
+  background-color: #f8f8f8;
+  border-left: 4px solid #4CAF50;
+}
+
+.menu-item.delivery {
+  background-color: #f8f8f8;
+  border-left: 4px solid #2196F3;
 }
