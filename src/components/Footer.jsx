@@ -15,7 +15,7 @@ const Footer = () => {
           <Link to="/testimonials">Testimonials</Link>
           <Link to="/contact">Contact</Link>
           <a 
-            href="https://order.nexbistro.com/store/a2fb7173-b326-4c9e-8cf0-f47421edb88c" 
+            href="https://www.menu-meal-24.com/ordering/restaurant/menu?company_uid=362e6e4f-f0a4-4e56-bbcc-1da259ad9013&restaurant_uid=e8d0bdc6-747a-4dcb-9c53-3c1bdc36bd2d&facebook=true" 
             target="_blank"
             rel="noopener noreferrer"
           >
