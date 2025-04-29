@@ -6,7 +6,7 @@
 .about-hero {
   height: 60vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('../assets/pizza.jpg'); /* Using pizza.jpg which exists in assets */
+              url('https://firebasestorage.googleapis.com/v0/b/pizza-house-nashville.appspot.com/o/images%2Fpizza.jpg?alt=media');
   background-size: cover;
   background-position: center;
   display: flex;

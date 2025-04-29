@@ -1,9 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import '../styles/Request.css';
-import wingsImage from '../assets/wings-catering.jpeg';
-import slider3 from '../assets/slider3.jpeg';
-import slider4 from '../assets/slider4.jpeg';
+import StorageImage from '../components/StorageImage';
 
 const Request = () => {
   return (
@@ -29,7 +27,7 @@ const Request = () => {
             </ul>
           </div>
           <div className="image-container">
-            <img src={wingsImage} alt="Catering spread" />
+            <StorageImage path="wings-catering.jpeg" alt="Catering spread" />
           </div>
         </div>
       </section>
@@ -50,8 +48,8 @@ const Request = () => {
             <p>Ideal for birthday celebrations, family gatherings, and casual get-togethers!</p>
           </div>
           <div className="image-grid">
-            <img src={slider3} alt="Private party service" />
-            <img src={slider4} alt="Restaurant dining" />
+            <StorageImage path="slider3.jpeg" alt="Private party service" />
+            <StorageImage path="slider4.jpeg" alt="Restaurant dining" />
           </div>
         </div>
       </section>

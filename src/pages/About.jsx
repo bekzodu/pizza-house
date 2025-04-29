@@ -2,9 +2,7 @@ import React from 'react';
 import '../styles/AboutStyle.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import catering from '../assets/catering.jpg';
-import catering2 from '../assets/catering2.jpg';
-import catering3 from '../assets/catering3.jpg';
+import StorageImage from '../components/StorageImage';
 import qualityIcon from '../assets/quality.svg';
 import traditionIcon from '../assets/tradition.svg';
 import communityIcon from '../assets/community.svg';
@@ -27,19 +25,19 @@ const About = () => {
           
           <div className="story-grid">
             <div className="story-card">
-              <img src={catering} alt="Our restaurant catering service" />
+              <StorageImage path="catering.jpg" alt="Our restaurant catering service" />
               <h3>Crafted with Passion</h3>
               <p>Every pizza that leaves our kitchen is crafted by skilled artisans who understand that great pizza is a perfect balance of technique and heart.</p>
             </div>
 
             <div className="story-card">
-              <img src={catering2} alt="Pizza House catering setup" />
+              <StorageImage path="catering2.jpg" alt="Pizza House catering setup" />
               <h3>Traditional Methods</h3>
               <p>We stay true to traditional pizza-making methods, using a recipe that's been perfected over generations and ingredients sourced from trusted suppliers.</p>
             </div>
 
             <div className="story-card">
-              <img src={catering3} alt="Pizza House food display" />
+              <StorageImage path="catering3.jpg" alt="Pizza House food display" />
               <h3>Community First</h3>
               <p>More than just a pizzeria, we're proud to be part of the Nashville community, serving up slices of joy and creating memories one pizza at a time.</p>
             </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/ImageCarousel.css';
+import StorageImage from './StorageImage';
 
 const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -71,7 +72,7 @@ const ImageCarousel = ({ images }) => {
                 : ''
             }`}
           >
-            <img src={image.url} alt={image.alt} />
+            <StorageImage path={image.path} alt={image.alt} className="carousel-image" />
             {image.overlay && (
               <div className="carousel-content-overlay">
                 <h2>{image.overlay.title}</h2>
