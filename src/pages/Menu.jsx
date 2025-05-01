@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Menu.css';
-import chickenRancherSub from '../assets/PizzaHouse_ChickenRancherSub.jpg';
-import calzoneImg from '../assets/PizzaHouse_Calzone.jpg';
-import houseSalad from '../assets/PizzaHouse_HouseSalad.jpg';
-import meatLoversPizza from '../assets/PizzaHouse_MeatloversPizza.jpg';
+import StorageImage from '../components/StorageImage';
 
 const menuCategories = [
   { id: 'pizza', name: 'PIZZA MENU', color: 'primary' },
@@ -288,7 +285,7 @@ const menuData = {
       { 
         name: "Small Calzone", 
         price: 13.99, 
-        image: calzoneImg 
+        image: StorageImage 
       },
       { 
         name: "Medium Calzone", 
@@ -388,7 +385,7 @@ const menuData = {
     subs: {
       title: "SUBS",
       items: [
-        { name: "Chicken Rancher Sub", price: 9.30, image: chickenRancherSub },
+        { name: "Chicken Rancher Sub", price: 9.30, image: StorageImage },
         { name: "Meatball Sub", price: 9.30 },
         { name: "Chicken Parmesan Sub", price: 9.30 },
         { name: "Ham & Cheese Sub", price: 9.30 },
@@ -407,7 +404,7 @@ const menuData = {
         { 
           name: "House Salad", 
           price: 7.99, 
-          image: houseSalad,
+          image: StorageImage,
           description: "Lettuce, cherry tomatoes, cucumber topped with cheddar cheese, & black olives. Served with your choice of dressing."
         },
         { 

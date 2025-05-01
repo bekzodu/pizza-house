@@ -2,34 +2,34 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import '../styles/HomeStyle.css';
 import Navbar from '../components/Navbar';
-import clip1 from '../assets/clip1.mp4';
-import background from '../assets/background.svg';
+// import background from '../assets/background.svg';
 import pizza from '../assets/pizza.svg';
 import logo from '../assets/logo-no-bg.svg';
-import catering from '../assets/catering.jpg';
+import clip1 from '../assets/clip1.mp4';
 import catering2 from '../assets/catering2.jpg';
 import catering3 from '../assets/catering3.jpg';
 import cateringTruck from '../assets/catering-truck.svg';
-import breadsticks from '../assets/PizzaHouse_Breadsticks.jpg';
-import slider1 from '../assets/slider1.jpeg';
-import slider2 from '../assets/slider2.jpeg';
-import slider3 from '../assets/slider3.jpeg';
+// import breadsticks from '../assets/PizzaHouse_Breadsticks.jpg';
+// import slider1 from '../assets/slider1.jpeg';
+// import slider2 from '../assets/slider2.jpeg';
+// import slider3 from '../assets/slider3.jpeg';
 import ImageCarousel from '../components/ImageCarousel';
 import FoodCarousel from '../components/FoodCarousel';
-import chickenWings from '../assets/PizzaHouse_6PieceChickenWings.jpg';
-import caesarSalad from '../assets/PizzaHouse_CaesarSalad.jpg';
-import calzone from '../assets/PizzaHouse_Calzone.jpg';
-import cheesyBreadsticks from '../assets/PizzaHouse_CheesyBreadsticks.jpg';
-import chickenRancherSub from '../assets/PizzaHouse_ChickenRancherSub.jpg';
-import houseSalad from '../assets/PizzaHouse_HouseSalad.jpg';
-import meatLoversPizza from '../assets/PizzaHouse_MeatloversPizza.jpg';
-import mozzarellaSticks from '../assets/PizzaHouse_MozzarellaSticks.jpg';
+// import chickenWings from '../assets/PizzaHouse_6PieceChickenWings.jpg';
+// import caesarSalad from '../assets/PizzaHouse_CaesarSalad.jpg';
+// import calzone from '../assets/PizzaHouse_Calzone.jpg';
+// import cheesyBreadsticks from '../assets/PizzaHouse_CheesyBreadsticks.jpg';
+// import chickenRancherSub from '../assets/PizzaHouse_ChickenRancherSub.jpg';
+// import houseSalad from '../assets/PizzaHouse_HouseSalad.jpg';
+// import meatLoversPizza from '../assets/PizzaHouse_MeatloversPizza.jpg';
+// import mozzarellaSticks from '../assets/PizzaHouse_MozzarellaSticks.jpg';
 import ReviewsCarousel from '../components/ReviewsCarousel';
 import pizzaHouseLogoRound from '../assets/pizza-house-logo-round.svg';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import confettiPoppers from '../assets/confetti-poppers.svg';
 import pizzaPng from '../assets/pizza.png';
+import StorageImage from '../components/StorageImage';
 
 const Home = () => {
   const truckRef = React.useRef(null);
@@ -84,7 +84,7 @@ const Home = () => {
 
   const carouselImages = [
     {
-      url: catering3,
+      path: "catering3.jpg",
       alt: "Delicious Dessert 1",
       overlay: {
         title: "A Delicious Taste from Pizza House",
@@ -92,83 +92,83 @@ const Home = () => {
       }
     },
     {
-      url: catering2,
+      path: "catering2.jpg",
       alt: "Delicious Dessert 2",
     },
     {
-      url: catering,
+      path: "catering.jpg",
       alt: "Delicious Dessert 3",
     },
     {
-      url: breadsticks,
+      path: "PizzaHouse_Breadsticks.jpg",
       alt: "Pizza House Breadsticks",
     },
     {
-      url: slider1,
+      path: "slider1.jpeg",
       alt: "Slider Image 1",
     },
     {
-      url: slider2,
+      path: "slider2.jpeg",
       alt: "Slider Image 2",
     },
     {
-      url: slider3,
+      path: "slider3.jpeg",
       alt: "Slider Image 3",
     }
   ];
 
   const foodItems = [
     {
-      image: chickenWings,
+      path: "PizzaHouse_6PieceChickenWings.jpg",
       alt: "6 Piece Chicken Wings",
       name: "Chicken Wings",
       price: 10.33,
       orderUrl: "https://www.menu-meal-24.com/ordering/restaurant/menu?company_uid=362e6e4f-f0a4-4e56-bbcc-1da259ad9013&restaurant_uid=e8d0bdc6-747a-4dcb-9c53-3c1bdc36bd2d&facebook=true"
     },
     {
-      image: breadsticks,
+      path: "PizzaHouse_Breadsticks.jpg",
       alt: "Breadsticks",
       name: "Breadsticks",
       price: 7.23,
       orderUrl: "https://www.menu-meal-24.com/ordering/restaurant/menu?company_uid=362e6e4f-f0a4-4e56-bbcc-1da259ad9013&restaurant_uid=e8d0bdc6-747a-4dcb-9c53-3c1bdc36bd2d&facebook=true"
     },
     {
-      image: caesarSalad,
+      path: "PizzaHouse_CaesarSalad.jpg",
       alt: "Caesar Salad",
       name: "Caesar Salad",
       price: 8.26,
       orderUrl: "https://www.menu-meal-24.com/ordering/restaurant/menu?company_uid=362e6e4f-f0a4-4e56-bbcc-1da259ad9013&restaurant_uid=e8d0bdc6-747a-4dcb-9c53-3c1bdc36bd2d&facebook=true"
     },
     {
-      image: calzone,
+      path: "PizzaHouse_Calzone.jpg",
       alt: "Calzone",
       name: "Calzone",
       price: 14.47,
       orderUrl: "https://www.menu-meal-24.com/ordering/restaurant/menu?company_uid=362e6e4f-f0a4-4e56-bbcc-1da259ad9013&restaurant_uid=e8d0bdc6-747a-4dcb-9c53-3c1bdc36bd2d&facebook=true"
     },
     {
-      image: cheesyBreadsticks,
+      path: "PizzaHouse_CheesyBreadsticks.jpg",
       alt: "Cheesy Breadsticks",
       name: "Cheesy Breadsticks",
       price: 9.30,
       orderUrl: "https://www.menu-meal-24.com/ordering/restaurant/menu?company_uid=362e6e4f-f0a4-4e56-bbcc-1da259ad9013&restaurant_uid=e8d0bdc6-747a-4dcb-9c53-3c1bdc36bd2d&facebook=true"
     },
     {
-      image: chickenRancherSub,
+      path: "PizzaHouse_ChickenRancherSub.jpg",
       alt: "Chicken Rancher Sub",
       name: "Chicken Rancher Sub",
       price: 9.30,
       orderUrl: "https://www.menu-meal-24.com/ordering/restaurant/menu?company_uid=362e6e4f-f0a4-4e56-bbcc-1da259ad9013&restaurant_uid=e8d0bdc6-747a-4dcb-9c53-3c1bdc36bd2d&facebook=true"
     },
     {
-      image: houseSalad,
+      path: "PizzaHouse_HouseSalad.jpg",
       alt: "House Salad",
       name: "House Salad",
       price: 6.19,
       orderUrl: "https://www.menu-meal-24.com/ordering/restaurant/menu?company_uid=362e6e4f-f0a4-4e56-bbcc-1da259ad9013&restaurant_uid=e8d0bdc6-747a-4dcb-9c53-3c1bdc36bd2d&facebook=true"
     },
     {
-      image: meatLoversPizza,
+      path: "PizzaHouse_MeatloversPizza.jpg",
       alt: "Meat Lovers Pizza",
       name: "Meat Lovers Pizza",
       price: 13.44,
@@ -176,7 +176,7 @@ const Home = () => {
       orderUrl: "https://www.menu-meal-24.com/ordering/restaurant/menu?company_uid=362e6e4f-f0a4-4e56-bbcc-1da259ad9013&restaurant_uid=e8d0bdc6-747a-4dcb-9c53-3c1bdc36bd2d&facebook=true"
     },
     {
-      image: mozzarellaSticks,
+      path: "PizzaHouse_MozzarellaSticks.jpg",
       alt: "Mozzarella Sticks",
       name: "Mozzarella Sticks",
       price: 8.26,
@@ -256,10 +256,10 @@ const Home = () => {
         <div className="cateringRow">
           <div className="cateringImage">
             <img 
-              ref={catering3Ref}
-              src={catering3} 
+              src={catering3}
               alt="Corporate Catering Service" 
               className="catering-slide-image"
+              style={{ opacity: 1, transform: 'none' }}
             />
           </div>
           <div className="cateringText">
@@ -278,10 +278,10 @@ const Home = () => {
         <div className="cateringRow reverse">
           <div className="cateringImage">
             <img 
-              ref={catering2Ref}
-              src={catering2} 
+              src={catering2}
               alt="Private Event Catering" 
               className="catering-slide-image"
+              style={{ opacity: 1, transform: 'none' }}
             />
           </div>
           <div className="cateringText">

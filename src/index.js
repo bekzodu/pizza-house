@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { trackEvent } from './firebase';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const rootElement = (
@@ -11,14 +12,26 @@ const rootElement = (
   </React.StrictMode>
 );
 
+// Track app initialization
+trackEvent('app_initialized', {
+  initialization_time: new Date().toISOString()
+});
+
 // Support for React Snap
 if (document.getElementById('root').hasChildNodes()) {
   ReactDOM.hydrateRoot(document.getElementById('root'), rootElement);
+  trackEvent('app_hydrated');
 } else {
   root.render(rootElement);
+  trackEvent('app_rendered');
 }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Send web vitals to Firebase Analytics
+reportWebVitals(({ name, value, id }) => {
+  trackEvent('web_vitals', {
+    metric_id: id,
+    metric_name: name,
+    metric_value: Math.round(value),
+    metric_delta: value
+  });
+});

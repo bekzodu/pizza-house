@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/FoodCarousel.css';
+import StorageImage from './StorageImage';
 
 const FoodCarousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(items.length);
@@ -55,7 +56,7 @@ const FoodCarousel = ({ items }) => {
               }}
               onTransitionEnd={handleTransitionEnd}
             >
-              <img src={item.image} alt={item.alt} />
+              <StorageImage path={item.path || item.image} alt={item.alt} />
               <div className="food-item-overlay">
                 <h3 className="food-item-name">{item.name}</h3>
                 <p className="food-item-price">
