@@ -6,7 +6,7 @@
 .about-hero {
   height: 60vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('../assets/pizza.jpg'); /* Using pizza.jpg which exists in assets */
+              url('../assets/pizza.png'); /* Changed from pizza.jpg to pizza.png */
   background-size: cover;
   background-position: center;
   display: flex;

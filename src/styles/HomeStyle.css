@@ -219,6 +219,9 @@ flex-direction: row-reverse;
 
 
 .cateringText {
+display: flex;
+flex-direction: column;
+align-items: center;
 flex: 1;
 padding: 2rem;
 position: relative;
@@ -319,22 +322,41 @@ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
 .cateringText {
   padding: 1rem;
-  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 
 .cateringText h2 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 
 .cateringText p {
+  margin-top: 1rem;
   font-size: 1rem;
+  line-height: 1.4;
 }
 
 
 .cateringImage {
   padding: 1rem;
+}
+
+.cateringButton {
+  display: block;
+  width: 80%;
+  margin: 1.5rem auto;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+}
+
+.catering-truck, .confetti-poppers {
+  display: block;
+  margin: 1rem auto;
+  width: 80px;
 }
 }
 
@@ -644,5 +666,28 @@ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
   .mobile-pizza {
     display: block;
+  }
+}
+
+/* Add this new class for the catering buttons */
+.cateringButton {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.3rem;
+  background-color: #d0103a; /* Changed to a more contrasting color */
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid white;
+}
+
+.cateringButton:hover {
+  background-color: #b30d32;
+  transform: scale(1.05);
+}
+
+/* Update responsive styles for the buttons */
+@media (max-width: 760px) {
+  .cateringButton {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
   }
 }

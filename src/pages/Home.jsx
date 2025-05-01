@@ -270,8 +270,8 @@ const Home = () => {
               alt="Catering Truck" 
               className="catering-truck" 
             />
+            <Link to="/request" className="orderButton cateringButton">Book Catering</Link>
             <p>Make your next business meeting or corporate event memorable with our premium catering services. We offer customizable packages that include our signature pizzas, appetizers, and salads, perfect for groups of any size.</p>
-            <Link to="/request" className="orderButton">Book Catering</Link>
           </div>
         </div>
 
@@ -293,8 +293,8 @@ const Home = () => {
               alt="Confetti Poppers" 
               className="confetti-poppers" 
             />
+            <Link to="/request" className="orderButton cateringButton" style={{ position: 'relative', zIndex: 2 }}>Learn More</Link>
             <p>From birthday parties to wedding receptions, let us make your special day unforgettable. Our dedicated catering team ensures fresh, hot pizzas and impeccable service for all your private event needs.</p>
-            <Link to="/request" className="orderButton" style={{ position: 'relative', zIndex: 2 }}>Learn More</Link>
           </div>
         </div>
       </section>
